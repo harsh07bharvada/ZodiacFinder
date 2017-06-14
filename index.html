@@ -1,0 +1,580 @@
+<html>
+
+	<head>
+		<script src="jquery.min.js"></script>
+		<link href="style.css" rel="stylesheet" />
+		<link href="style11.css" rel="stylesheet" />
+	
+		<script>
+			
+			function foo()
+			{
+			flag=1;
+			vd=eval(day.value);
+			vm=eval(month.value);
+			
+			if((vm==2)&&(vd>29))
+			{
+				flag=0;
+			}
+			
+			else{
+			
+				i=1;
+				for(i=1;i<=7;i++)
+					{
+						if((i%2)==0&&vm==i&&vd>30)
+						{flag=0;
+						
+						}
+			
+					}
+					
+				for(i=8;i<=12;i++)
+					{
+						if((i%2)!=0&&vm==i&&vd>30)
+						{flag=0;}
+					}
+					
+			}
+			if((textbox1.value==""))
+			{
+			alert("Cant be kept empty");
+			}
+			
+			if(flag==1)
+			{
+			
+			name=textbox1.value;
+			
+			
+			
+			var zodiac;
+			if((vd>=20&&vm==1)||(vd<=18&&vm==2))
+			zodiac="Aquarius";
+			else if((vd>=19&&vm==2)||(vd<=20&&vm==3))
+			zodiac="Pisces";
+			else if((vd>=21&&vm==3)||(vd<=19&&vm==4))
+			zodiac="Aries";
+			else if((vd>=20&&vm==4)||(vd<=20&&vm==5))
+			zodiac="Taurus";
+			else if((vd>=21&&vm==5)||(vd<=20&&vm==6))
+			zodiac="Gemini";
+			else if((vd>=21&&vm==6)||(vd<=22&&vm==7))
+			zodiac="Cancer";
+			else if((vd>=23&&vm==7)||(vd<=22&&vm==8))
+			zodiac="Leo";
+			else if((vd>=23&&vm==8)||(vd<=22&&vm==9))
+			zodiac="Virgo";
+			else if((vd>=23&&vm==9)||(vd<=22&&vm==10))
+			zodiac="Libra";
+			else if((vd>=23&&vm==10)||(vd<=21&&vm==11))
+			zodiac="Scorpio";
+			else if((vd>=22&&vm==11)||(vd<=21&&vm==12))
+			zodiac="Sagittarius";
+			else if((vd>=22&&vm==12)||(vd<=19&&vm==1))
+			zodiac="Capricorn";
+			
+			
+			switch(zodiac)
+			{
+			case"Aquarius":document.getElementById('imgplace').style.backgroundImage="url(images/aquarius.png)";tabs.innerHTML="<b>Strengths:</b> Progressive, original, independent, humanitarian</br><b>Weaknesses:</b> Runs from emotional expression, temperamental, uncompromising, aloof</br><b>Aquarius likes:</b> Fun with friends, helping others, fighting for causes, intellectual conversation, a good listener</br><b>Aquarius dislikes:</b> Limitations, broken promises, being lonely, dull or boring situations, people who disagree with them";
+			break; 
+			case"Pisces":document.getElementById('imgplace').style.backgroundImage="url(images/pisces.png)";tabs.innerHTML="<b>Strengths:</b> Compassionate, artistic, intuitive, gentle, wise, musical</br><b>Weaknesses:</b> Fearful, overly trusting, sad, desire to escape reality, can be a victim or a martyr</br><b>Pisces likes:</b> Being alone, sleeping, music, romance, visual media, swimming, spiritual themes</br><b>Pisces dislikes:</b> Know-it-all, being criticized, the past coming back to haunt, cruelty of any kind";break; 
+			case"Aries":document.getElementById('imgplace').style.backgroundImage="url(images/aries.png)";tabs.innerHTML="<b>Strengths:</b> Courageous, determined, confident, enthusiastic, optimistic, honest, passionate </br> <b>Weaknesses:</b> Impatient, moody, short-tempered, impulsive, aggressive </br> <b>Aries likes:</b> Comfortable clothes, taking on leadership roles, physical challenges, individual sports </br><b> Aries dislikes: </b>Inactivity, delays, work that does not use one's talents";
+			break; 
+			case"Taurus":document.getElementById('imgplace').style.backgroundImage="url(images/taurus.png)";tabs.innerHTML="<b>Strengths:</b> Reliable, patient, practical, devoted, responsible, stable</br><b>Weaknesses:</b> Stubborn, possessive, uncompromising</br><b>Taurus likes:</b> Gardening, cooking, music, romance, high quality clothes, working with hands</br><b>Taurus dislikes:</b> Sudden changes, complications, insecurity of any kind, synthetic fabrics";
+			break; 
+			case"Gemini":document.getElementById('imgplace').style.backgroundImage="url(images/gemini.png)";tabs.innerHTML="<b>Strengths:</b> Gentle, affectionate, curious, adaptable, ability to learn quickly and exchange ideas</br><b>Weaknesses:</b> Nervous, inconsistent, indecisive</br><b>Gemini likes:</b> Music, books, magazines, chats with nearly anyone, short trips around the town</br><b>Gemini dislikes:</b> Being alone, being confined, repetition and routine</br>";
+			break; 
+			case"Cancer":document.getElementById('imgplace').style.backgroundImage="url(images/cancer.png)";tabs.innerHTML="<b>Strengths:</b> Tenacious, highly imaginative, loyal, emotional, sympathetic, persuasive</br><b>Weaknesses:</b> Moody, pessimistic, suspicious, manipulative, insecure</br><b>Cancer likes:</b> Art, home-based hobbies, relaxing near or in water, helping loved ones, a good meal with friends</br><b>Cancer dislikes:</b> Strangers, any criticism of Mom, revealing of personal life";
+			break; 
+			case"Leo":document.getElementById('imgplace').style.backgroundImage="url(images/leo.png)";tabs.innerHTML="<b>Strengths:</b> Creative, passionate, generous, warm-hearted, cheerful, humorous</br><b>Weaknesses:</b> Arrogant, stubborn, self-centered, lazy, inflexible</br><b>Leo likes:</b> Theater, taking holidays, being admired, expensive things, bright colors, fun with friends</br><b>Leo dislikes:</b> Being ignored, facing difficult reality, not being treated like a king or queen";
+			break; 
+			case"Virgo":document.getElementById('imgplace').style.backgroundImage="url(images/virgo.png)";tabs.innerHTML="<b>Strengths:</b> Loyal, analytical, kind, hardworking, practical</br><b>Weaknesses:</b> Shyness, worry, overly critical of self and others, all work and no play</br><b>Virgo likes:</b> Animals, healthy food, books, nature, cleanliness</br><b>Virgo dislikes:</b> Rudeness, asking for help, taking center stage";
+			break; 
+			case"Libra":document.getElementById('imgplace').style.backgroundImage="url(images/libra.png)";tabs.innerHTML="<b>Strengths:</b> Cooperative,diplomatic, gracious, fair-minded, social</br><b>Weaknesses:</b> Indecisive, avoids confrontations, will carry a grudge, self-pity</br><b>Libra likes:</b> Harmony, gentleness, sharing with others, the outdoors</br><b>Libra dislikes:</b> Violence, injustice, loudmouths, conformity";
+			break; 
+			case"Scorpio":document.getElementById('imgplace').style.backgroundImage="url(images/scorpio.png)";tabs.innerHTML="<b>Strengths:</b> Resourceful, brave, passionate, stubborn, a true friend</br><b>Weaknesses:</b> Distrusting, jealous, secretive, violent</br><b>Scorpio likes:</b> Truth, facts, being right, longtime friends, teasing, a grand passion</br><b>Scorpio dislikes:</b> Dishonesty, revealing secrets, passive people";
+			break; 
+			case"Sagittarius":document.getElementById('imgplace').style.backgroundImage="url(images/sagittarius.png)";tabs.innerHTML="<b>Strengths:</b> Generous, idealistic, great sense of humor</br><b>Weaknesses:</b> Promises more than can deliver, very impatient, will say anything no matter how undiplomatic</br><b>Sagittarius likes:</b> Freedom, travel, philosophy, being outdoors</br><b>Sagittarius dislikes:</b> Clingy people, being constrained, off-the-wall theories, details";
+			break; 
+			
+			case"Capricorn":document.getElementById('imgplace').style.backgroundImage="url(images/capricorn.png)";tabs.innerHTML="<b>Strengths:</b> Responsible, disciplined, self-control, good managers</br><b>Weaknesses:</b> Know-it-all, unforgiving, condescending, expecting the worst</br><b>Capricorn likes:</b> Family, tradition, music, understated status, quality craftsmanship</br><b>Capricorn dislikes:</b> Almost everything at some point";
+			break; 
+			
+			default:alert("incorrect");break;
+			}
+			
+			printname.innerHTML="Hii  "+name +" !";
+			sign.innerHTML=zodiac;
+			$( "#leftcol" ).animate({ "left": "2.5%" }, 700 );
+			$( "#centercol" ).animate({ "left": "35%",
+				opacity:1}, 700 );
+			$( "#previous" ).animate({ "left": "47%",
+				opacity:1}, 700 );
+			$( "#rightcol" ).animate({ "left": "67.5%",
+				opacity:1}, 700 );
+				$( "#rightstatic" ).animate({ "left": "67.5%",
+				opacity:0}, 700 );
+			
+			
+			
+			}
+			else if(flag==0)
+			{
+			alert("date not possible!");
+			}
+			
+			flag=1;
+		}
+		
+		$(document).ready(function()
+			{
+			document.getElementById('famouscake').style.backgroundImage="url(images/cake.png)";
+			document.getElementById('previous').style.backgroundImage="url(images/previous.png)";
+			document.getElementById('previous1').style.backgroundImage="url(images/previous.png)";
+			$("#previous").click(function()
+				{
+				$( "#leftcol" ).animate({ "left": "35%" }, 700 );
+			$( "#centercol" ).animate({ "left": "67.5%",
+				opacity:0}, 700 );
+			$( "#previous" ).animate({ "left": "47%",
+				opacity:0}, 700 );
+			$( "#rightcol" ).animate({ "left": "67.5%",
+				opacity:0}, 700 );
+				$( "#rightstatic" ).animate({ "left": "67.5%",
+				opacity:1}, 700 );
+			});
+			
+			
+			$("#previous1").click(function()
+				{
+				$( "#leftcol" ).animate({ "left": "35%",opacity:1 
+				}, 700 );
+				$( "#rightstatic" ).animate({ "left": "67.5%",opacity:1 
+				}, 700 );
+			$( "#centercol" ).animate({ "left": "67.5%",
+				opacity:0}, 700 );
+			$( "#previous1" ).animate({ "left": "47%",
+				opacity:0}, 700 );
+			$( "#rightcol" ).animate({ "left": "67.5%",
+				opacity:0}, 700 );
+				$( "#rightcol1" ).animate({ "left": "67.5%",
+				opacity:0}, 700 );
+			});
+			
+			
+			$("#btn1").click(function()
+				{
+				$( "#leftcol" ).animate({ "left": "2.5%",
+				opacity:0}, 700 );
+				$( "#rightcol1" ).animate({ "left": "67.5%",
+				opacity:1}, 700 );
+			
+				$( "#previous" ).animate({ "left": "47%",
+				opacity:0}, 700 );
+				
+			$( "#previous1" ).animate({ "left": "47%",
+				opacity:1}, 700 );
+				$( "#rightstatic" ).animate({ "left": "2.5%",
+				opacity:0}, 700 );
+			
+				
+				
+			});
+			
+			$("#btn2").click(function()
+				{
+				
+				flag=1;
+			
+			vm=eval(month1.value);
+			
+			
+			
+			if((textbox2.value==""))
+			{
+			alert("Cant be kept empty");
+			}
+			
+			if(flag==1)
+			{
+			
+			name=textbox2.value;
+			
+			
+			
+			var zodiac;
+			if(vm==1)
+			monthname="JAN";
+			else if(vm==2)
+			monthname="FEB";
+			else if(vm==3)
+			monthname="MAR";
+			else if(vm==4)
+			monthname="APR";
+			else if(vm==5)
+			monthname="MAY";
+			else if(vm==6)
+			monthname="JUN";
+			else if(vm==7)
+			monthname="JUL";
+			else if(vm==8)
+			monthname="AUG";
+			else if(vm==9)
+			monthname="SEP";
+			else if(vm==10)
+			monthname="OCT";
+			else if(vm==11)
+			monthname="NOV";
+			else if(vm==12)
+			monthname="DEC";
+			
+			
+			switch(monthname)
+			{
+			case"JAN":document.getElementById('imgplace').style.backgroundImage="url(images/JAN.jpg)";tabs.innerHTML="<b>Rahul Dravid</b></br><b>About:</b> Former cricketer who was the first player to be named ICC Test Player of the Year and Player of the Year in 2004.</br><b>Before Fame:</b> He played his first professional domestic cricket game with Karnataka in 1990.</br><b>Trivia:</b> He held the record for most Test cricket catches at the time of his retirement.";
+			break; 
+			case"FEB":document.getElementById('imgplace').style.backgroundImage="url(images/FEB.jpg)";tabs.innerHTML="<b>Cristiano Ronaldo</b></br><b>About:</b> Became one of the top soccer players in the world, rising to fame as a forward for Real Madrid, who acquired him from Manchester United through a $131.6 million transfer fee in 2009.He received the Ballon d'Or as the European Footballer of the Year in 2008, 2013, and 2014.</br><b>Trivia:</b> He broke a number of La Liga records as well as Real Madrid franchise records and scored his 300th career goal in January, 2013.";break; 
+			case"MAR":document.getElementById('imgplace').style.backgroundImage="url(images/MAR.jpg)";tabs.innerHTML="<b>Yuvraj Singh</b></br><b>About:</b> Man of the Tournament in the 2011 Cricket World Cup, vice-captain of the Indian team in ODI's from 2007 to 2008.</br><b>Before Fame:</b> He was an avid roller-skater as a child, winning the National Under-14 Roller Skating Championship.</br><b>Trivia:</b> He hit six sixes against England at the 2007 ICC World Twenty20, a feat never before accomplished in international cricket.";
+			break; 
+			case"APR":document.getElementById('imgplace').style.backgroundImage="url(images/APR.jpg)";tabs.innerHTML="<b>Sachin Tendulkar</b></br><b>About:</b> Former cricketer who was the first player to be named ICC Test Player of the Year and Player of the Year in 2004.</br><b>Before Fame:</b> He played his first professional domestic cricket game with Karnataka in 1990.</br><b>Trivia:</b> He held the record for most Test cricket catches at the time of his retirement.";
+			break; 
+			case"MAY":document.getElementById('imgplace').style.backgroundImage="url(images/MAY.jpg)";tabs.innerHTML="<b>Rahul Dravid</b></br><b>About:</b> Former cricketer who was the first player to be named ICC Test Player of the Year and Player of the Year in 2004.</br><b>Before Fame:</b> He played his first professional domestic cricket game with Karnataka in 1990.</br><b>Trivia:</b> He held the record for most Test cricket catches at the time of his retirement.";
+			break; 
+			case"JUN":document.getElementById('imgplace').style.backgroundImage="url(images/JUN.jpg)";tabs.innerHTML="<b>Rahul Dravid</b></br><b>About:</b> Former cricketer who was the first player to be named ICC Test Player of the Year and Player of the Year in 2004.</br><b>Before Fame:</b> He played his first professional domestic cricket game with Karnataka in 1990.</br><b>Trivia:</b> He held the record for most Test cricket catches at the time of his retirement.";
+			break; 
+			case"JUL":document.getElementById('imgplace').style.backgroundImage="url(images/JUL.jpg)";tabs.innerHTML="<b>Rahul Dravid</b></br><b>About:</b> Former cricketer who was the first player to be named ICC Test Player of the Year and Player of the Year in 2004.</br><b>Before Fame:</b> He played his first professional domestic cricket game with Karnataka in 1990.</br><b>Trivia:</b> He held the record for most Test cricket catches at the time of his retirement.";
+			break; 
+			case"AUG":document.getElementById('imgplace').style.backgroundImage="url(images/AUG.jpg)";tabs.innerHTML="<b>Rahul Dravid</b></br><b>About:</b> Former cricketer who was the first player to be named ICC Test Player of the Year and Player of the Year in 2004.</br><b>Before Fame:</b> He played his first professional domestic cricket game with Karnataka in 1990.</br><b>Trivia:</b> He held the record for most Test cricket catches at the time of his retirement.";
+			break; 
+			case"SEP":document.getElementById('imgplace').style.backgroundImage="url(images/SEP.jpg)";tabs.innerHTML="<b>Rahul Dravid</b></br><b>About:</b> Former cricketer who was the first player to be named ICC Test Player of the Year and Player of the Year in 2004.</br><b>Before Fame:</b> He played his first professional domestic cricket game with Karnataka in 1990.</br><b>Trivia:</b> He held the record for most Test cricket catches at the time of his retirement.";
+			break; 
+			case"OCT":document.getElementById('imgplace').style.backgroundImage="url(images/OCT.jpg)";tabs.innerHTML="<b>Rahul Dravid</b></br><b>About:</b> Former cricketer who was the first player to be named ICC Test Player of the Year and Player of the Year in 2004.</br><b>Before Fame:</b> He played his first professional domestic cricket game with Karnataka in 1990.</br><b>Trivia:</b> He held the record for most Test cricket catches at the time of his retirement.";
+			break; 
+			case"NOV":document.getElementById('imgplace').style.backgroundImage="url(images/NOV.jpg)";tabs.innerHTML="<b>Rahul Dravid</b></br><b>About:</b> Former cricketer who was the first player to be named ICC Test Player of the Year and Player of the Year in 2004.</br><b>Before Fame:</b> He played his first professional domestic cricket game with Karnataka in 1990.</br><b>Trivia:</b> He held the record for most Test cricket catches at the time of his retirement.";
+			break; 
+			
+			case"DEC":document.getElementById('imgplace').style.backgroundImage="url(images/DEC.jpg)";tabs.innerHTML="<b>Rahul Dravid</b></br><b>About:</b> Former cricketer who was the first player to be named ICC Test Player of the Year and Player of the Year in 2004.</br><b>Before Fame:</b> He played his first professional domestic cricket game with Karnataka in 1990.</br><b>Trivia:</b> He held the record for most Test cricket catches at the time of his retirement.";
+			break; 
+			
+			default:alert("incorrect");break;
+			}
+			
+			printname.innerHTML="Hii  "+name +" !";
+			sign.innerHTML=monthname;
+			
+				$( "#centercol" ).animate({ "left": "2.5%",
+				opacity:1}, 700 );
+			
+			
+				$( "#rightcol" ).animate({ "left": "35%",
+				opacity:1}, 700 );
+			
+			
+			
+			}
+			else if(flag==0)
+			{
+			alert("date not possible!");
+			}
+			
+			flag=1;
+				
+			
+				
+			});
+			
+			
+		});
+		</script>
+	
+	
+	</head>
+
+	<body>
+	
+		<div class="container"><!--START OF CONTAINER-->
+	
+			<div class="header"><!--START OF HEADER-->
+			
+				<div class="title"><!--TITLE-->
+				
+					<h1>Zodiac Finder</h1>
+				
+					<hr/>
+					
+				</div><!--END OF TITLE-->
+			
+			</div><!--END OF HEADER-->
+			
+			<div class="nameclass" id="nameclass1"><!--START OF NAMECLASS-->
+			
+				
+				
+				<div id="printname"><!--START OF PRINTING AREA-->
+				
+					Hii User !
+				
+				</div><!--END OF PRINTING AREA-->
+			
+			</div><!----END OF NAMECLASS-->
+	
+			<div id="famous"><!--famous birthdays-->
+				
+				<div id="heading">
+					
+				FAMOUS BIRTHDAYS
+				</div>
+				
+				<div id="famouscake">
+				</div>
+				
+				<div id="famousbtn">
+					<input id="btn1" class="button button2" type="button" value="FIND" />
+				</div>
+				
+				</div><!--end-->
+				
+	
+	
+			<div id="leftcol"><!--START OF LEFT COL-->
+			
+			
+				<div class="uprow">
+				
+					<div class="labelgetname" id="labelgetname"><!--START OF GETNAME-->
+				
+					First Name:
+				
+					</div><!--END OF GETNAME-->
+				
+					<div id="inputbox"><!--START OF INPUT BOX-->
+				
+						<input type="text" id="textbox1"/>
+						
+					</div><!--END OF INPUTBOX--->
+					
+				
+				
+				</div>
+			
+			
+			
+				<div id="midrow">	
+				
+					<div class="labelgetday" id="labelgetday"><!--START OF GETDAY-->
+				
+						Birthday:
+				
+					</div><!--END OF GETDAY-->
+				
+					<div id="dropbox1"><!--START OF drop BOX1-->
+				
+								<select id="day">
+									<option>DAY</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+									<option value="21">21</option>
+									<option value="22">22</option>
+									<option value="23">23</option>
+									<option value="24">24</option>
+									<option value="25">25</option>
+									<option value="26">26</option>
+									<option value="27">27</option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>
+								</select>
+						
+					</div><!--END OF INPUTBOX1--->
+				</div><!--MIDROW CLOSES--->
+				
+					<div id="downrow">	
+				
+						<!--asdas><div class="labelgetmonth" id="labelgetmonth"><!--START OF GETMONTH-->
+				
+						<!--Birth Month:
+				
+						</div><!--END OF GETMONTH-->
+				
+					<!--end of it-->
+						<div id="dropbox2"><!--START OF DROP BOX2-->
+				
+									<select id="month">
+										<option>MONTH</option>
+										<option value="1">Jan</option>
+										<option value="2">Feb</option>
+										<option value="3">Mar</option>
+										<option value="4">Apr</option>
+										<option value="5">May</option>
+										<option value="6">Jun</option>
+										<option value="7">Jul</option>
+										<option value="8">Aug</option>
+										<option value="9">Sept</option>
+										<option value="10">Oct</option>
+										<option value="11">Nov</option>
+										<option value="12">Dec</option>
+									</select>
+						
+						
+						</div><!--END OF DROPBOX2--->
+					</div>
+				
+					<div class="buttonrow">
+				
+						<div id="namebutton"><!--START OF NAMEBUTTON-->
+						<input id="btn" class="button button2" type="button" value="FIND YOUR SIGN" onclick="foo()"/>
+							
+						</div><!--END OF NAMEBUTTON----->
+						
+						<div id="previous">
+						</div>
+				
+					</div>
+				
+				</div><!--END OF LEFT COL-->
+				
+				
+				
+				
+				
+				
+				
+	
+	
+				<div id="centercol"><!--START OF RIGHT COL-->
+				
+						<div class="pulse1"></div>
+						<div class="pulse2"></div>
+						<div id="imgplace"><!--START OF IMAGEPLACE-->
+					
+						</div><!---END OF IMAGEPLACE-->
+						
+						<div id="sign">
+						
+						</div>
+				
+				
+				</div><!--END OF RIGHTCOL-->
+	
+				<div id="rightcol"><!--START OF RIGHT COL-->
+				
+					<div id="tabs">
+						
+					
+					</div>
+						
+				
+				</div><!--END OF RIGHTCOL-->
+	
+				<div id="rightcol1"><!--START OF RIGHT1 COL-->
+				
+					<div class="uprow1">
+				
+					<div  id="labelgetname1"><!--START OF GETNAME-->
+				
+					First Name:
+				
+					</div><!--END OF GETNAME-->
+				
+					<div id="inputbox1"><!--START OF INPUT BOX-->
+				
+						<input type="text" id="textbox2"/>
+						
+					</div><!--END OF INPUTBOX--->
+					
+				
+				
+				</div>
+			
+			
+			
+				<div id="midrow1">	
+				
+					<div id="labelgetday1"><!--START OF GETDAY-->
+				
+						Birthmonth:
+				
+					</div><!--END OF GETDAY-->
+				
+				</div><!--MIDROW CLOSES--->
+				
+					<div id="downrow1">	
+				
+						<!--asdas><div class="labelgetmonth" id="labelgetmonth"><!--START OF GETMONTH-->
+				
+						<!--Birth Month:
+				
+						</div><!--END OF GETMONTH-->
+				
+					<!--end of it-->
+						<div id="dropbox21"><!--START OF DROP BOX2-->
+				
+									<select id="month1">
+										<option>MONTH</option>
+										<option value="1">Jan</option>
+										<option value="2">Feb</option>
+										<option value="3">Mar</option>
+										<option value="4">Apr</option>
+										<option value="5">May</option>
+										<option value="6">Jun</option>
+										<option value="7">Jul</option>
+										<option value="8">Aug</option>
+										<option value="9">Sept</option>
+										<option value="10">Oct</option>
+										<option value="11">Nov</option>
+										<option value="12">Dec</option>
+									</select>
+						
+						
+						</div><!--END OF DROPBOX2--->
+					</div>
+				
+					<div class="buttonrow1">
+				
+						<div id="namebutton1"><!--START OF NAMEBUTTON-->
+						<input id="btn2" class="button button2" type="button" value="FIND CELEBRITY"/>
+							
+						</div><!--END OF NAMEBUTTON----->
+						
+						<div id="previous1">
+						</div>
+				
+					</div>
+						
+				
+				</div><!--END OF RIGHTCOL1-->
+	
+				<div id="rightstatic">
+					<div id="rightcontent">
+						Best Website for finding Zodiac signs!
+					</div>
+				</div>
+				
+	
+		</div><!--END OF CONTAINER-->
+	
+	</body>
+	
+</html>

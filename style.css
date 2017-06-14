@@ -1,0 +1,413 @@
+*{
+margin:0;
+padding:0;
+}
+
+	@font-face {
+    font-family: 'robotomedium';
+    src: url('fonts/roboto-medium-webfont.eot');
+    src: url('fonts/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto-medium-webfont.woff2') format('woff2'),
+         url('fonts/roboto-medium-webfont.woff') format('woff'),
+         url('fonts/roboto-medium-webfont.ttf') format('truetype'),
+         url('fonts/roboto-medium-webfont.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+
+font-family:robotomedium;
+
+}
+
+
+input[type="text"]
+{
+	width:154px;
+    font-size:20px;
+	font-family:robotomedium;
+	
+}
+
+option{
+	font-size:20px;
+	font-family:robotomedium;
+}
+
+#day ,#month ,#month1{
+	font-size:17px;
+	font-family:robotomedium;
+}
+.button , .button2{
+	font-family:robotomedium;
+	
+}
+
+.container{
+	position:absolute;
+	background:#fcfdff;
+	left:.5%;
+	width:99%;
+	height:99%;
+}
+
+.header{
+	position:absolute;
+	top:3%;
+	height:25%;
+	width:100%;
+	background:#fcfdff;
+	
+}
+
+.title h1{
+	position:absolute;
+	top:37%;
+	left:40%;
+	color:#032731;
+	font-weight:bold;
+	font-size:3em;
+	
+}
+
+.title hr{
+	position:absolute;
+	top:80%;
+	width:50%;
+	height:1.5%;
+	left:25%;
+	background:#032731;
+	border-radius:13px;
+}
+
+.nameclass{
+	position:absolute;
+	top:31%;
+	height:10%;
+	width:100%;
+	background:#fcfdff;
+}
+
+
+
+#printname{
+	position:absolute;
+	left:45%;
+	top:10%;
+	color:#032731;
+	font-size:2em;
+}
+
+#leftcol{
+	position:absolute;
+	top:45%;
+	height:47%;
+	width:30%;
+	left:35%;
+	background:white;
+	border-radius:3px;
+	box-shadow: 5px 5px 15px #888888;
+	}
+	
+	
+
+
+
+#labelgetname{
+	position:absolute;
+	top:15%;
+	left:16%;
+	font-size:1.5em;
+	color:#032731;
+	
+}
+
+#inputbox{
+	position:absolute;
+	top:15%;
+	left:50%;
+	border: 1px solid #008CBA;
+}
+
+
+#labelgetday{
+	position:absolute;
+	top:38%;
+	left:16%;
+	font-size:1.5em;
+	color:#032731;
+	
+}
+
+#dropbox1{
+	position:absolute;
+	top:38%;
+	left:50%;
+	border: 1px solid #008CBA;
+	
+}
+
+/*#labelgetmonth{
+	position:absolute;
+	top:57%;
+	left:16%;
+	font-size:1.5em;
+	color:#032731;
+	
+}
+*/
+
+#dropbox2{
+	position:absolute;
+	top:38%;
+	left:65%;
+	border: 1px solid #008CBA;
+	
+}
+
+#namebutton{
+	position:absolute;
+	left:20%;
+	top:60%;
+	
+}
+
+.button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+   
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button2 {
+    background-color: #008CBA;
+    color: white;
+    border: 2px solid #008CBA;
+	border-radius:3px;
+}
+
+.button2:hover {
+    border: 2px solid #008CBA;
+	background-color:white;
+    color: #008CBA;
+	border-radius:3px;	
+}
+
+#centercol{
+	position:absolute;
+	top:45%;
+	height:47%;
+	width:30%;
+	left:65%;
+	background:white;
+	opacity:0;
+	border-radius:3px;
+	box-shadow: 5px 5px 15px #888888;
+}
+#imgplace{
+	position:absolute;
+	top:23%;
+	left:31%;
+	height:150px;
+	width:150px;
+	background-size:100% 100%;
+	background-color:white;
+	
+}
+
+#previous{
+	position:absolute;
+	top:78%;
+	left:%;
+	height:55px;
+	width:55px;
+	opacity:0;
+	background-size:100% 100%;
+	background-color:white;
+	
+}
+
+#sign{
+	position:absolute;
+	left:40%;
+	top:80%;
+	color:#032731;
+	font-size:1.5em;
+}
+
+#rightcol{
+	position:absolute;
+	top:45%;
+	height:47%;
+	width:30%;
+	left:67.5%;
+	background:white;
+	opacity:0;
+	border-radius:3px;
+	
+	box-shadow: 5px 5px 15px #888888;
+}
+
+#tabs{
+	position:absolute;
+	top:10%;
+	left:10%;
+	width:80%;
+	height:80%;
+	background:white;
+	
+}
+
+
+
+#famous{
+	position:absolute;
+	top:45%;
+	height:47%;
+	width:30%;
+	left:2.5%;
+	background:#ebf5ff;
+	border-radius:3px;
+	
+	box-shadow: 5px 5px 15px #888888;
+	opacity:1;
+	}
+	
+#heading{
+	position:absolute;
+	top:10%;
+	left:9%;
+	width:78%;
+	height:14%;
+	padding-left:10px;
+	border:1px dashed #032731;
+	border-radius:3px;
+	color:#032731;
+	font-size:2em;
+	
+}
+#famouscake{
+	position:absolute;
+	left:38%;
+	top:30%;
+	height:100px;
+	width:100px;
+	background-size:100% 100%;
+	
+}
+
+#famousbtn{
+	position:absolute;
+	left:28%;
+	top:72%;
+}
+#rightcol1{
+	position:absolute;
+	top:45%;
+	height:47%;
+	width:30%;
+	left:67.5%;
+	background:white;
+	opacity:0;
+	border-radius:3px;
+	
+	box-shadow: 5px 5px 15px #888888;
+}
+
+#celebimg{
+	position:absolute;
+	top:23%;
+	left:31%;
+	height:150px;
+	width:150px;
+	background-size:100% 100%;
+	background-color:white;
+	
+}
+
+#labelgetname1{
+	position:absolute;
+	top:15%;
+	left:16%;
+	font-size:1.5em;
+	color:#032731;
+	
+}
+
+#inputbox1{
+	position:absolute;
+	top:15%;
+	left:50%;
+	border: 1px solid #008CBA;
+}
+
+
+#labelgetday1{
+	position:absolute;
+	top:38%;
+	left:16%;
+	font-size:1.5em;
+	color:#032731;
+	
+}
+
+
+
+#dropbox21{
+	position:absolute;
+	top:38%;
+	left:65%;
+	border: 1px solid #008CBA;
+	
+}
+
+#namebutton1{
+	position:absolute;
+	left:20%;
+	top:60%;
+	
+}
+#previous1{
+	position:absolute;
+	top:78%;
+	left:%;
+	height:55px;
+	width:55px;
+	opacity:0;
+	background-size:100% 100%;
+	
+	
+}
+#rightstatic{
+	position:absolute;
+	top:45%;
+	height:47%;
+	width:30%;
+	left:67.5%;
+	background:#ebf5ff;
+	opacity:1;
+	border-radius:3px;
+	
+	box-shadow: 5px 5px 15px #888888;
+}
+
+#rightcontent{
+	
+	position:absolute;
+	top:35%;
+	width:60%;
+	left:10%;
+	font-size:1.5em;
+	color:#032731;
+	
+	
+	
+}
